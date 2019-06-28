@@ -1,0 +1,27 @@
+
+<html>
+  <head><title>JSONを読み込む例</title></head>
+  <body>
+  <form>
+    <input type=text placeholder="departure" name=departure>
+    <input type=text placeholder="arrival" name=arrival>
+    <input type=submit>
+  </form>
+
+  <br>
+
+    路線：
+    <ul>
+      {% for line in network %}
+      <li> {{line.Name}}
+        <ul>
+          {% for station in line["Stations"] %}
+          <li> {{station}} </li>
+          {% endfor %}
+        </ul> 
+      </li>
+      {% endfor %}
+    </ul>
+  </body>
+</html>
+  
