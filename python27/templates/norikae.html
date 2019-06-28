@@ -1,6 +1,15 @@
+
 <html>
   <head><title>JSONを読み込む例</title></head>
   <body>
+  <form>
+    <input type=text placeholder="departure" name=departure>
+    <input type=text placeholder="arrival" name=arrival>
+    <input type=submit>
+  </form>
+
+  <br>
+
     路線：
     <ul>
       {% for line in network %}
